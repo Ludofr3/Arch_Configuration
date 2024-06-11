@@ -1,78 +1,65 @@
-# Profile settings
-profile:
-  # A list of packages to be installed
-  packages:
-    - python
-    - nodejs
-    - java-openjdk
-    - rust
-    - bluez
-    - bluez-utils
-    - networkmanager
-    - networkmanager-ssh
-    - networkmanager-ssh-gnome
-    - wpa_supplicant
-    - yay
-    - pamac
-    - wget
-    - cargo
-    - zsh
-    - tree
-    - tmux
-    - rsync
-    - vlc
-    - gparted
-    - rclone-browser
-    - code
-    - gnome
-    - gnome-tweaks
-    - git
-    - rclone
-    - gnome-keyring
-    - gnome-screenshot
-    - dialog
-    - efibootmgr
-    - linux-firmware
-    - hyprland
-
-# User settings
-user:
-  # The username of the user to be created
-  username: your_username
-  # The password of the user to be created
-  password: your_password
-  # The groups the user should be added to
-  groups: ['wheel']
-
-# Disk settings
-disk:
-  # The disk to install on
-  device: /dev/sda
-  # The partition table type to use
-  partition_table_type: gpt
-  # The boot partition size in MiB
-  boot_partition_size: 512
-  # The swap partition size in MiB
-  swap_partition_size: 2048
-
-# Network settings
-network:
-  # The hostname of the system
-  hostname: your_hostname
-  # The timezone of the system
-  timezone: Europe/Paris
-  # Whether to enable DHCP
-  dhcp: true
-
-# Services settings
-services:
-  # A list of services to be enabled
-  enabled:
-    - NetworkManager
-    - sshd
-
-# Post-installation settings
-post_installation:
-  # A list of commands to be run after installation
-  commands:
-    - echo "Your post-installation commands here"
+{
+  "profile": {
+    "packages": [
+      "python",
+      "nodejs",
+      "java-openjdk",
+      "rust",
+      "bluez",
+      "bluez-utils",
+      "networkmanager",
+      "networkmanager-ssh",
+      "networkmanager-ssh-gnome",
+      "wpa_supplicant",
+      "yay",
+      "pamac",
+      "wget",
+      "cargo",
+      "zsh",
+      "tree",
+      "tmux",
+      "rsync",
+      "vlc",
+      "gparted",
+      "rclone-browser",
+      "code",
+      "gnome",
+      "gnome-tweaks",
+      "git",
+      "rclone",
+      "gnome-keyring",
+      "gnome-screenshot",
+      "dialog",
+      "efibootmgr",
+      "linux-firmware",
+      "hyprland"
+    ]
+  },
+  "user": {
+    "username": "your_username",
+    "password": "your_password",
+    "groups": ["wheel"]
+  },
+  "disk": {
+    "device": "/dev/sda",
+    "partition_table_type": "gpt",
+    "boot_partition_size": 512,
+    "swap_partition_size": 2048
+  },
+  "network": {
+    "hostname": "your_hostname",
+    "timezone": "Europe/Paris",
+    "dhcp": true
+  },
+  "services": {
+    "enabled": [
+      "NetworkManager",
+      "sshd"
+    ]
+  },
+  "post_installation": {
+    "commands": [
+      "echo \"Your post-installation commands here\""
+    ]
+  }
+}
