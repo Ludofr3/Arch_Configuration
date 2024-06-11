@@ -1,0 +1,130 @@
+# Configuration file for archinstall
+
+# Disk configuration
+disk:
+  - device: /dev/sda
+    wipe: true
+    partitions:
+      - mountpoint: /
+        filesystem: ext4
+        size: 100%
+      - mountpoint: /home
+        filesystem: ext4
+        size: 100%
+
+# User configuration
+user:
+  username: myuser
+  password: mypassword
+  groups:
+    - wheel
+    - audio
+
+# Network configuration
+network:
+  hostname: myhostname
+  dns:
+    - 8.8.8.8
+    - 8.8.4.4
+  interfaces:
+    - name: enp0s3
+      ip: 192.168.1.100
+      gateway: 192.168.1.1
+      dhcp: false
+
+# Timezone configuration
+timezone: Europe/Paris
+
+# Packages configuration
+packages:
+  - base
+  - linux
+  - linux-firmware
+  - grub
+  - efibootmgr
+  - networkmanager
+  - wpa_supplicant
+  - dialog
+  - wget
+  - git
+  - zsh
+  - vim
+  - neovim
+  - tmux
+  - htop
+  - tree
+  - rsync
+  - sshfs
+  - openssh
+  - sudo
+  - man-db
+  - man-pages
+  - archlinux-wallpaper
+  - ttf-dejavu
+  - ttf-liberation
+  - noto-fonts
+  - noto-fonts-emoji
+  - noto-fonts-cjk
+  - noto-fonts-extra
+  - firefox
+  - thunderbird
+  - gimp
+  - inkscape
+  - vlc
+  - libreoffice-fresh
+  - gparted
+  - gnome-keyring
+  - gnome-terminal
+  - gnome-control-center
+  - gnome-backgrounds
+  - gnome-themes-standard
+  - gnome-shell-extensions
+  - gnome-tweaks
+  - gnome-screenshot
+  - gnome-calculator
+  - gnome-disk-utility
+  - gnome-system-monitor
+  - gnome-terminal-nautilus
+  - gnome-software
+  - gnome-software-packagekit-plugin
+  - gnome-themes-extra
+  - gnome-menus
+  - gnome-settings-daemon
+  - gnome-shell
+  - gnome-desktop
+  - gnome
+  - gnome-extra
+  - gdm
+  - polkit-gnome
+  - network-manager-applet
+  - networkmanager-openvpn
+  - networkmanager-pptp
+  - networkmanager-vpnc
+  - networkmanager-l2tp
+  - networkmanager-openconnect
+  - networkmanager-ssh
+  - networkmanager-strongswan
+  - networkmanager-vpnc-gnome
+  - networkmanager-pptp-gnome
+  - networkmanager-l2tp-gnome
+  - networkmanager-openconnect-gnome
+  - networkmanager-ssh-gnome
+  - networkmanager-strongswan-gnome
+  - networkmanager-vpnc-openvpn
+  - networkmanager-pptp-openvpn
+  - networkmanager-l2tp-openvpn
+  - networkmanager-openconnect-openvpn
+  - networkmanager-ssh-openvpn
+  - networkmanager-strongswan-openvpn
+
+# Services configuration
+services:
+  - NetworkManager
+  - sshd
+  - gdm
+
+# Bootloader configuration
+bootloader:
+  type: grub
+  install: true
+  efi_boot_partition: /dev/sda1
