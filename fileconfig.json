@@ -82,11 +82,20 @@
     "kernels": [
         "linux"
     ],
-    "keyboard-layout": "us",
+    "keyboard-layout": "fr",
     "mirror-region": {
-        "Australia": {
-            "http://archlinux.mirror.digitalpacific.com.au/$repo/os/$arch": true,
-        }
+        "France": [
+            "https://mirror.cyberbits.eu/archlinux/iso/2024.06.01/",
+            "https://mirrors.eric.ovh/arch/iso/2024.06.01/",
+            "https://mirrors.gandi.net/archlinux/iso/2024.06.01/",
+            "https://archmirror.hogwarts.fr/iso/2024.06.01/",
+            "https://mirror.ibakerserver.pt/Arch/iso/2024.06.01/",
+            "https://mirror.its-tps.fr/archlinux/iso/2024.06.01/",
+            "https://mirror.jordanrey.me/archlinux/iso/2024.06.01/",
+            "https://mirrors.jtremesay.org/archlinux/iso/2024.06.01/",
+            "https://arch.juline.tech/iso/2024.06.01/",
+            "https://mirroir.labhouse.fr/arch/iso/2024.06.01/"
+        ]
     },
     "nic": {
         "dhcp": true,
