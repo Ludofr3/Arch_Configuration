@@ -2,12 +2,14 @@
     "__separator__": null,
     "additional-repositories": [],
     "archinstall-language": "English",
-    "audio_config": null,
-    "bootloader": "Systemd-boot",
+    "audio_config": {
+        "audio": "pipewire"
+    },
+    "bootloader": "Grub",
     "config_version": "2.6.0",
     "debug": false,
     "disk_config": {
-        "config_type": "manual_partitioning",
+        "config_type": "default_layout",
         "device_modifications": [
             {
                 "device": "/dev/sda",
@@ -110,12 +112,6 @@
             }
         ]
     },
-    "disk_encryption": {
-        "encryption_type": "luks",
-        "partitions": [
-            "3e75d045-21a4-429d-897e-8ec19a006e8b"
-        ]
-    },
     "hostname": "computer",
     "kernels": [
         "linux"
@@ -123,7 +119,7 @@
     "locale_config": {
         "kb_layout": "fr",
         "sys_enc": "UTF-8",
-        "sys_lang": "fr_FR"
+        "sys_lang": "en_US"
     },
     "mirror_config": {
         "custom_mirrors": [],
@@ -146,13 +142,20 @@
     "no_pkg_lookups": false,
     "ntp": true,
     "offline": false,
-    "packages": [],
-    "parallel downloads": 0,
-    "profile_config": null,
-    "save_config": null,
-    "script": "guided",
+    "packages": ["docker", "git"],
+    "parallel downloads": 5,
+    "profile_config": {
+        "gfx_driver": "All open-source (default)",
+        "greeter": "web-greeter",
+        "profile": {
+            "details": ["GNOME"],
+            "main": "Desktop"
+        }
+    },
+    "save_config": "./user_configuration.json",
+    "script": "minimal",
     "silent": false,
     "swap": true,
-    "timezone": "UTC",
+    "timezone": "Europe/Paris",
     "version": "2.6.0"
 }
