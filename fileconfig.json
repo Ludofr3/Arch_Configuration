@@ -138,16 +138,19 @@
             ]
         }
     },
-    "network_config": {},
+    "network_config": {
+        "type": "nm"
+    },
     "no_pkg_lookups": false,
     "ntp": true,
     "offline": false,
     "packages": ["docker", "git"],
     "parallel downloads": 5,
     "profile_config": {
-        "gfx_driver": "All open-source (default)",
-        "greeter": "web-greeter",
+        "gfx_driver": null,
+        "greeter": "gdm",
         "profile": {
+            "custom_settings": {},
             "details": ["GNOME"],
             "main": "Desktop"
         }
@@ -155,7 +158,10 @@
     "save_config": "./user_configuration.json",
     "script": "minimal",
     "silent": false,
+    "skip_ntp": false,
+    "skip_version_check": false,
     "swap": true,
     "timezone": "Europe/Paris",
+    "uki": false,
     "version": "2.6.0"
 }
