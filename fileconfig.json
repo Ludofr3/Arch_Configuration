@@ -2,7 +2,7 @@
     "__separator__": null,
     "additional-repositories": [],
     "archinstall-language": "English",
-    "audio_config": "pipewire",
+    "audio_config": null,
     "bootloader": "Systemd-boot",
     "config_version": "2.6.0",
     "debug": false,
