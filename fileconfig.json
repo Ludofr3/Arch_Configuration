@@ -1,12 +1,13 @@
 {
-    "config_version": "2.5.2",
+    "__separator__": null,
     "additional-repositories": [],
     "archinstall-language": "English",
-    "audio_config": {"audio": "pipewire"},
+    "audio_config": "pipewire",
     "bootloader": "Systemd-boot",
+    "config_version": "2.6.0",
     "debug": false,
     "disk_config": {
-        "config_type": "default_layout",
+        "config_type": "manual_partitioning",
         "device_modifications": [
             {
                 "device": "/dev/sda",
@@ -17,18 +18,57 @@
                             "Boot"
                         ],
                         "fs_type": "fat32",
-                        "size": {
+                        "length": {
                             "sector_size": null,
-                            "unit": "MiB",
-                            "value": 512
+                            "total_size": null,
+                            "unit": "B",
+                            "value": 99982592
                         },
                         "mount_options": [],
                         "mountpoint": "/boot",
-                        "obj_id": "2c3fa2d5-2c79-4fab-86ec-22d0ea1543c0",
+                        "obj_id": "369f31a8-2781-4d6b-96e7-75680552b7c9",
                         "start": {
+                            "sector_size": {
+                                "sector_size": null,
+                                "total_size": null,
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "total_size": null,
+                            "unit": "sectors",
+                            "value": 34
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "flags": [],
+                        "fs_type": "fat32",
+                        "length": {
                             "sector_size": null,
-                            "unit": "MiB",
-                            "value": 1
+                            "total_size": null,
+                            "unit": "B",
+                            "value": 100000000
+                        },
+                        "mount_options": [],
+                        "mountpoint": "/efi",
+                        "obj_id": "13cf2c96-8b0f-4ade-abaa-c530be589aad",
+                        "start": {
+                            "sector_size": {
+                                "sector_size": null,
+                                "total_size": null,
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "total_size": {
+                                "sector_size": null,
+                                "total_size": null,
+                                "unit": "B",
+                                "value": 16106127360
+                            },
+                            "unit": "MB",
+                            "value": 100
                         },
                         "status": "create",
                         "type": "primary"
@@ -37,54 +77,58 @@
                         "btrfs": [],
                         "flags": [],
                         "fs_type": "ext4",
-                        "size": {
+                        "length": {
                             "sector_size": null,
-                            "unit": "GiB",
-                            "value": 20
+                            "total_size": null,
+                            "unit": "B",
+                            "value": 15805127360
                         },
                         "mount_options": [],
                         "mountpoint": "/",
-                        "obj_id": "3e7018a0-363b-4d05-ab83-8e82d13db208",
+                        "obj_id": "3e75d045-21a4-429d-897e-8ec19a006e8b",
                         "start": {
-                            "sector_size": null,
-                            "unit": "MiB",
-                            "value": 513
-                        },
-                        "status": "create",
-                        "type": "primary"
-                    },
-                    {
-                        "btrfs": [],
-                        "flags": [],
-                        "fs_type": "ext4",
-                        "size": {
-                            "sector_size": null,
-                            "unit": "Percent",
-                            "value": 100
-                        },
-                        "mount_options": [],
-                        "mountpoint": "/home",
-                        "obj_id": "ce58b139-f041-4a06-94da-1f8bad775d3f",
-                        "start": {
-                            "sector_size": null,
-                            "unit": "GiB",
-                            "value": 20
+                            "sector_size": {
+                                "sector_size": null,
+                                "total_size": null,
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "total_size": {
+                                "sector_size": null,
+                                "total_size": null,
+                                "unit": "B",
+                                "value": 16106127360
+                            },
+                            "unit": "MB",
+                            "value": 301
                         },
                         "status": "create",
                         "type": "primary"
                     }
                 ],
-                "wipe": true
+                "wipe": false
             }
         ]
     },
-    "hostname": "archlinux",
+    "disk_encryption": {
+        "encryption_type": "luks",
+        "partitions": [
+            "3e75d045-21a4-429d-897e-8ec19a006e8b"
+        ]
+    },
+    "hostname": "computer",
     "kernels": [
         "linux"
     ],
-    "keyboard-layout": "fr",
-    "mirror-region": {
-        "France": [
+    "locale_config": {
+        "kb_layout": "fr",
+        "sys_enc": "UTF-8",
+        "sys_lang": "fr_FR"
+    },
+    "mirror_config": {
+        "custom_mirrors": [],
+        "mirror_regions": {
+            "France": [
             "https://mirror.cyberbits.eu/archlinux/iso/2024.06.01/",
             "https://mirrors.eric.ovh/arch/iso/2024.06.01/",
             "https://mirrors.gandi.net/archlinux/iso/2024.06.01/",
@@ -95,36 +139,20 @@
             "https://mirrors.jtremesay.org/archlinux/iso/2024.06.01/",
             "https://arch.juline.tech/iso/2024.06.01/",
             "https://mirroir.labhouse.fr/arch/iso/2024.06.01/"
-        ]
+            ]
+        }
     },
-    "nic": {
-        "dhcp": true,
-        "dns": null,
-        "gateway": null,
-        "iface": null,
-        "ip": null,
-        "type": "nm"
-    },
+    "network_config": {},
     "no_pkg_lookups": false,
     "ntp": true,
     "offline": false,
     "packages": [],
     "parallel downloads": 0,
-    "profile_config": {
-        "gfx_driver": "All open-source (default)",
-        "greeter": "sddm",
-        "profile": {
-            "details": [
-                "KDE Plasma"
-            ],
-            "main": "Desktop"
-        }
-    },
+    "profile_config": null,
+    "save_config": null,
     "script": "guided",
     "silent": false,
     "swap": true,
-    "sys-encoding": "utf-8",
-    "sys-language": "en_US",
     "timezone": "UTC",
-    "version": "2.5.2"
+    "version": "2.6.0"
 }
