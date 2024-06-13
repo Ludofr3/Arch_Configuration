@@ -150,7 +150,7 @@
         "gfx_driver": null,
         "greeter": "gdm",
         "profile": {
-            "details": ["GNOME", "Hyprland"],
+            "details": ["Gnome", "Hyprland"],
             "main": "Desktop"
         }
     },
