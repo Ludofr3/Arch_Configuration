@@ -9,25 +9,9 @@
     "config_version": "2.6.0",
     "debug": false,
     "disk_config": {
-        "config_type": "manual_partitioning",
-        "device_modifications": [
-            {
-                "device": "/dev/sda",
-                "partitions": [
-                    {
-                        "fs_type": "ext4",
-                        "length": {
-                            "unit": "GB",
-                            "value": 20
-                        },
-                        "mountpoint": "/",
-                        "status": "create",
-                        "type": "primary"
-                    }
-                ],
-                "wipe": true
-            }
-        ]
+        "config_type": "default_layout",
+        "device": "/dev/sda",
+        "wipe": true
     },
     "hostname": "computer",
     "kernels": [
