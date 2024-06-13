@@ -71,6 +71,7 @@
         "gnome-screenshot",
         "dialog",
         "efibootmgr",
+        "docker",
         "linux-firmware"
     ],
     "parallel downloads": 10,
