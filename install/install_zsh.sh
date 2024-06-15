@@ -21,7 +21,7 @@ sed -i 's/ZSH_THEME=".*"/ZSH_THEME="powerlevel10k\/powerlevel10k"/g' ~/.zshrc
 
 # Installer les polices nécessaires pour Powerlevel10k
 echo "Installation des polices nécessaires pour Powerlevel10k..."
-sudo pacman -S ttf-meslo-nerd-font-powerlevel10k --noconfirm
+sudo pacman -S ttf-meslo-nerd --noconfirm
 
 # Appliquer les changements
 echo "Application des changements..."
