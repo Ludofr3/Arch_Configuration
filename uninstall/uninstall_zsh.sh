@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ../colors.sh
+
 # Désinstaller Zsh
 echo "Désinstallation de Zsh..."
 sudo pacman -Rsn zsh

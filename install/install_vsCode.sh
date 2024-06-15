@@ -1,8 +1,10 @@
 #!/bin/bash
 
+source ../colors.sh
+
 # Installer Visual Studio Code
-echo "Installation de Visual Studio Code..."
-yay -S visual-studio-code-bin
+echo "${GREEN}Installing Visual Studio Code of Microsoft...${NC}"
+yay -S visual-studio-code-bin --quiet
 
 # Liste des extensions à installer
 comments=("aaron-bond.better-comments", "kevinkyang.auto-comment-blocks", "exodiusstudios.comment-anchors",)
@@ -29,14 +31,14 @@ extensions=("${comments[@]}" "${cleanCode[@]}" "${themes[@]}" "${git[@]}" "${dev
 # Installer les extensions
 for ext in "${extensions[@]}"
 do
-   echo "Vérification de l'existence de l'extension $ext..."
-   if visual-studio-code-bin --list-extensions | grep -q "^$ext$"; then
-      echo "L'extension $ext est déjà installée."
+   echo "${BLUE}Vérification de l'existence de l'extension ${PURPLE} $ext...${NC}"
+   if code --list-extensions | grep -q "^$ext$"; then
+      echo "${GREEN}L'extension ${PURPLE}$ext${GREEN} est déjà installée.${NC}"
    else
-      echo "Installation de l'extension $ext..."
-      visual-studio-code-bin --install-extension $ext --force &&
-      echo "L'extension $ext a été installée avec succès."
+      echo "${BLUE}Installation de l'extension ${PURPLE}$ext${GREEN}...${NC}"
+      code --install-extension $ext --force &&
+      echo "${GREEN}L'extension ${PURPLE}$ext${GREEN} a été installée avec succès.${NC}"
    fi
 done
 
-echo "L'installation et la configuration de Visual Studio Code sont terminées avec succès."
+echo "${GREEN}L'installation et la configuration de Visual Studio Code sont terminées avec succès.${NC}"

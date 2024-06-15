@@ -1,21 +1,20 @@
 #!/bin/bash
 
+source ../colors.sh
+
 # Update the system
-echo "Updating the system..."
+echo "${GREEN}Updating the system...${NC}"
 sudo pacman -Syu --noconfirm
 
 # Install Git
-echo "Installing Git ..."
+echo "${GREEN}Installing Git ...${NC}"
 sudo pacman -S --needed base-devel git --noconfirm
 
 # Install Yay
-echo "Installing Yay..."
 ./install/install_yay.sh
 
 # Install Zsh
-echo "Installing Zsh..."
 ./install/install_zsh.sh
 
 # Install Visual Studio Code of Microsoft
-echo "Installing Visual Studio Code of Microsoft..."
 ./install/install_vsCode.sh

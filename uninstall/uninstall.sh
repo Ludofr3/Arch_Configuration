@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+source ../colors.sh
 
 sudo pacman -Rsn git
 
