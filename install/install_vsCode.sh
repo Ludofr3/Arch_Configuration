@@ -29,8 +29,14 @@ extensions=("${comments[@]}" "${cleanCode[@]}" "${themes[@]}" "${git[@]}" "${dev
 # Installer les extensions
 for ext in "${extensions[@]}"
 do
-   echo "Installation de l'extension $ext..."
-   code --install-extension $ext --force
+   echo "Vérification de l'existence de l'extension $ext..."
+   if code --list-extensions | grep -q "^$ext$"; then
+      echo "L'extension $ext est déjà installée."
+   else
+      echo "Installation de l'extension $ext..."
+      code --install-extension $ext --force &&
+      echo "L'extension $ext a été installée avec succès."
+   fi
 done
 
 echo "L'installation et la configuration de Visual Studio Code sont terminées avec succès."
