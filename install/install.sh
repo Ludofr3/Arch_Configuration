@@ -2,9 +2,11 @@
 
 # Update the system
 echo "Updating the system..."
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
 
-sudo pacman -S git
+#Install Git
+echo "Installing Git ..."
+sudo pacman -Sy git --noconfirm
 
 # Install Zsh
 echo "Installing Zsh..."
