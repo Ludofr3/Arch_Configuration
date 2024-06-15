@@ -40,7 +40,7 @@
     "no_pkg_lookups": false,
     "ntp": true,
     "offline": false,
-    "packages": [],
+    "packages": ["git"],
     "parallel downloads": 10,
     "profile_config": {
         "gfx_driver": null,

@@ -4,9 +4,15 @@
 echo "Updating the system..."
 sudo pacman -Syu --noconfirm
 
-#Install Git
+# Install Git
 echo "Installing Git ..."
-sudo pacman -Sy git --noconfirm
+sudo pacman -S --needed base-devel git --noconfirm
+
+# Install Yay
+echo "Installing Yay..."
+git clone https://aur.archlinux.org/yay-git.git
+cd yay-git
+makepkg -sri
 
 # Install Zsh
 echo "Installing Zsh..."

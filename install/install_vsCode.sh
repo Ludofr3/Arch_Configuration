@@ -2,14 +2,14 @@
 
 # Installer Visual Studio Code
 echo "Installation de Visual Studio Code..."
-sudo pacman -S code --noconfirm
+yay -S visual-studio-code-bin
 
 # Liste des extensions à installer
 comments=("aaron-bond.better-comments", "kevinkyang.auto-comment-blocks", "exodiusstudios.comment-anchors",)
 cleanCode=("shardulm94.trailing-spaces", "rubymaniac.vscode-paste-and-indent",)
 themes=("unthrottled.doki-theme",)
 git=("mhutchie.git-graph")
-devops=("ms-kubernetes-tools.vscode-kubernetes-tools", "ms-azuretools.vscode-docker", "ms-vscode-remote.remote-containers", "redhat.vscode-yaml",)
+devops=("ms-kubernetes-tools.vscode-kubernetes-tools", "ms-azuretools.vscode-docker", "ms-vscode-remote.remote-containers")
 ai=("smallcloud.codify", "kurusugawa-computer.markdown-copilot", "tabnine.tabnine-vscode",)
 securityCode=("sonarsource.sonarlint-vscode",)
 liveShare=("ms-vsliveshare.vsliveshare")
@@ -30,11 +30,11 @@ extensions=("${comments[@]}" "${cleanCode[@]}" "${themes[@]}" "${git[@]}" "${dev
 for ext in "${extensions[@]}"
 do
    echo "Vérification de l'existence de l'extension $ext..."
-   if code --list-extensions | grep -q "^$ext$"; then
+   if visual-studio-code-bin --list-extensions | grep -q "^$ext$"; then
       echo "L'extension $ext est déjà installée."
    else
       echo "Installation de l'extension $ext..."
-      code --install-extension $ext --force &&
+      visual-studio-code-bin --install-extension $ext --force &&
       echo "L'extension $ext a été installée avec succès."
    fi
 done
