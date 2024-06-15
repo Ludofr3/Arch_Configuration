@@ -2,7 +2,7 @@
 
 # Installer Visual Studio Code
 echo "Installation de Visual Studio Code..."
-sudo pacman -S code --noconfirm
+sudo pacman -S visual-studio-code-bin --noconfirm
 
 # Liste des extensions à installer
 comments=("aaron-bond.better-comments", "kevinkyang.auto-comment-blocks", "exodiusstudios.comment-anchors",)
