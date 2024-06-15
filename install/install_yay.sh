@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Install Yay
-cd &&
-git clone https://aur.archlinux.org/yay.git &&
-sudo chown ludo:ludo /home/ludo/yay &&
-cd yay &&
+cd .. &&
+git clone https://aur.archlinux.org/yay-git.git &&
+sudo chown ludo:ludo /home/ludo/yay-git &&
+cd yay-git &&
 makepkg -si &&
-cd &&
-rm -rf -rf /home/ludo/yay &&
+cd .. &&
+rm -rf /home/ludo/yay-git &&
 cd ./Arch_Configuration
 
