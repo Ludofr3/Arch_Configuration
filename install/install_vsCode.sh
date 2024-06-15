@@ -2,7 +2,7 @@
 
 # Installer Visual Studio Code
 echo "Installation de Visual Studio Code..."
-sudo pacman -S visual-studio-code-bin --noconfirm
+sudo pacman -S code --noconfirm
 
 # Liste des extensions à installer
 comments=("aaron-bond.better-comments", "kevinkyang.auto-comment-blocks", "exodiusstudios.comment-anchors",)
@@ -30,7 +30,7 @@ extensions=("${comments[@]}" "${cleanCode[@]}" "${themes[@]}" "${git[@]}" "${dev
 for ext in "${extensions[@]}"
 do
    echo "Installation de l'extension $ext..."
-   code --install-extension $ext
+   code --install-extension $ext --force
 done
 
 echo "L'installation et la configuration de Visual Studio Code sont terminées avec succès."
