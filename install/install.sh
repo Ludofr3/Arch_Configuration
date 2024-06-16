@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../colors.sh
+source "$PWD/../colors.sh"
 
 # Update the system
 echo "${GREEN}Updating the system...${NC}"

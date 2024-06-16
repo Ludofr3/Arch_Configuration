@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../colors.sh
+source "$PWD/../colors.sh"
 
 # Install Yay
 echo "${GREEN}Installing Yay...${NC}"

@@ -1,13 +1,13 @@
 #!/bin/bash
 
-source ../colors.sh
+source "$PWD/../colors.sh"
 
 # Désinstaller Zsh
-echo "Désinstallation de Zsh..."
+echo "Uninstalling Zsh..."
 sudo pacman -Rsn zsh
 
 # Désinstaller Oh My Zsh
-echo "Désinstallation de Oh My Zsh..."
+echo "Delete folder Oh My Zsh..."
 rm -rf ~/.oh-my-zsh
 
 # Changer le shell par défaut à Bash

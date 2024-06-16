@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../colors.sh
+source "$PWD/../colors.sh"
 
 # Install Zsh
 echo "${GREEN}Installing Zsh...${NC}"

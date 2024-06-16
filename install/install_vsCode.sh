@@ -1,13 +1,14 @@
 #!/bin/bash
 
-source ../colors.sh
+source "$PWD/../colors.sh"
 
 # Installer Visual Studio Code
 echo "${GREEN}Installing Visual Studio Code of Microsoft...${NC}"
 yay -S visual-studio-code-bin --quiet
 
 # Liste des extensions à installer
-declare -a comments=("aaron-bond.better-comments" "kevinkyang.auto-comment-blocks" "exodiusstudios.comment-anchors")
+declare -a comments=("aa
+ron-bond.better-comments" "kevinkyang.auto-comment-blocks" "exodiusstudios.comment-anchors")
 declare -a cleanCode=("shardulm94.trailing-spaces" "rubymaniac.vscode-paste-and-indent")
 declare -a themes=("unthrottled.doki-theme")
 declare -a git=("mhutchie.git-graph")

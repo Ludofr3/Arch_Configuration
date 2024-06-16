@@ -1,9 +1,14 @@
 #!/bin/bash
 
-source ../colors.sh
+source "$PWD/../colors.sh"
 
 sudo pacman -Rsn git
 
 # Uninstall Zsh
-echo "Uninstalling Zsh..."
 ./uninstall_zsh.sh
+
+# Uninstall Yay
+./uninstall_yay.sh
+
+# Uninstall Visual Studio Code
+./uninstall_vsCode.sh
