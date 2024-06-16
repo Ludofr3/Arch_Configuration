@@ -32,14 +32,13 @@ extensions=("${comments[@]}" "${cleanCode[@]}" "${themes[@]}" "${git[@]}" "${dev
 # Installer les extensions
 for ext in "${extensions[@]}"
 do
-   echo -e "${BLUE}Vérification de l'existence de l'extension ${PURPLE} $ext...${NC}"
+   echo -e "${BLUE}Vérification de l'existence de l'extension ${PURPLE}$ext${BLUE}...${NC}"
    if code --list-extensions | grep -q "^$ext$"; then
       echo -e "${GREEN}L'extension ${PURPLE}$ext${GREEN} est déjà installée.${NC}"
    else
-      echo -e "${BLUE}Installation de l'extension ${PURPLE}$ext${GREEN}...${NC}"
       code --install-extension $ext --force &&
-      echo -e "${GREEN}L'extension ${PURPLE}$ext${GREEN} a été installée avec succès.${NC}"
+      echo -e "${GREEN}L'extension ${PURPLE}$ext${GREEN} a été installée avec succès.${NC}\n"
    fi
 done
 
-echo -e "${GREEN}L'installation et la configuration de Visual Studio Code sont terminées avec succès.${NC}"
+echo -e "${GREEN}L'installation et la configuration de Visual Studio Code sont terminées avec succès.${NC}\n\n"
