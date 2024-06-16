@@ -4,7 +4,7 @@ source ../colors.sh
 
 # Installer Visual Studio Code
 echo -e "${GREEN}Installing Visual Studio Code of Microsoft...${NC}"
-yay -S visual-studio-code-bin --quiet
+yay -S visual-studio-code-bin --noconfirm --needed --quiet
 
 # Liste des extensions à installer
 declare -a comments=("aa

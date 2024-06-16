@@ -4,7 +4,7 @@ source ../colors.sh
 
 # Install Zsh
 echo -e "${GREEN}Installing Zsh...${NC}"
-sudo pacman -Sy zsh --noconfirm
+sudo pacman -Sy zsh --noconfirm --needed
 
 # Change the default shell to Zsh
 echo -e "${BLUE}Changing the default shell to Zsh...${NC}"
