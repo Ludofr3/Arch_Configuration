@@ -3,7 +3,7 @@
 source ../colors.sh
 
 # Uninstall Visual Studio Code
-echo -e "${GREEN}Uninstalling Visual Studio Code of Microsoft...${NC}"
+echo -e "${RED}Uninstalling Visual Studio Code of Microsoft...${NC}"
 sudo pacman -Rns visual-studio-code-bin
 
 # Delete extensions folder

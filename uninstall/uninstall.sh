@@ -2,8 +2,6 @@
 
 source ../colors.sh
 
-sudo pacman -Rsn git
-
 # Uninstall Zsh
 ./uninstall_zsh.sh
 
