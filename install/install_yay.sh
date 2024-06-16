@@ -1,9 +1,9 @@
 #!/bin/bash
 
-source "$PWD/../colors.sh"
+source ../colors.sh
 
 # Install Yay
-echo "${GREEN}Installing Yay...${NC}"
+echo -e "${GREEN}Installing Yay...${NC}"
 cd .. &&
 git clone https://aur.archlinux.org/yay-git.git &&
 cd yay-git &&

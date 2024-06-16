@@ -1,13 +1,13 @@
 #!/bin/bash
 
-source "$PWD/../colors.sh"
+source ../colors.sh
 
 # Update the system
-echo "${GREEN}Updating the system...${NC}"
+echo -e "${GREEN}Updating the system...${NC}"
 sudo pacman -Syu --noconfirm
 
 # Install Git
-echo "${GREEN}Installing Git ...${NC}"
+echo -e "${GREEN}Installing Git ...${NC}"
 sudo pacman -S --needed base-devel git --noconfirm
 
 # Install Yay

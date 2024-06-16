@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "$PWD/../colors.sh"
+source ../colors.sh
 
-echo "${RED}Uninstalling Yay...${NC}"
+echo -e "${RED}Uninstalling Yay...${NC}"
 sudo rm -rf $(which yay)
