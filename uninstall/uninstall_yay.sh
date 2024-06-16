@@ -1,4 +1,6 @@
 #!/bin/bash
 
+source "$PWD/../colors.sh"
+
 echo "${RED}Uninstalling Yay...${NC}"
-sudo pacman -Rsn yay
+sudo rm -rf $(which yay)
