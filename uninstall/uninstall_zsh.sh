@@ -12,7 +12,7 @@ rm -rf ~/.oh-my-zsh
 
 # Changer le shell par défaut à Bash
 echo -e "${BLUE}Changement du shell par défaut à Bash...${NC}"
-chsh -s /bin/bash
+sudo chsh -s $(which bash)
 
 # Appliquer les changements
 echo -e "${BLUE}Application des changements...${NC}"

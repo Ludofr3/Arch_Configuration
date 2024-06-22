@@ -2,7 +2,7 @@
 
 source ../colors.sh
 
-# Install Yay
+# Installing Yay
 echo -e "${GREEN}Installing Yay...${NC}"
 cd /home/ludo &&
 git clone https://aur.archlinux.org/yay-git.git &&

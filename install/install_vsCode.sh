@@ -2,11 +2,11 @@
 
 source ../colors.sh
 
-# Installer Visual Studio Code
+# Installing Visual Studio Code
 echo -e "${GREEN}Installing Visual Studio Code of Microsoft...${NC}"
 yay -S visual-studio-code-bin --noconfirm --needed --quiet
 
-# Liste des extensions à installer
+# Installing extensions' list
 declare -a comments=("aa
 ron-bond.better-comments" "kevinkyang.auto-comment-blocks" "exodiusstudios.comment-anchors")
 declare -a cleanCode=("shardulm94.trailing-spaces" "rubymaniac.vscode-paste-and-indent")
@@ -29,7 +29,7 @@ declare -a python=("ms-python.python" "ms-python.vscode-pylance")
 
 extensions=("${comments[@]}" "${cleanCode[@]}" "${themes[@]}" "${git[@]}" "${devops[@]}" "${ai[@]}" "${securityCode[@]}" "${liveShare[@]}" "${UML[@]}" "${bnf[@]}" "${markdown[@]}" "${cpp[@]}" "${react[@]}" "${golang[@]}" "${rust[@]}" "${python[@]}")
 
-# Installer les extensions
+# Installing extensions
 for ext in "${extensions[@]}"
 do
    echo -e "${BLUE}Vérification de l'existence de l'extension ${PURPLE}$ext${BLUE}...${NC}"

@@ -10,3 +10,6 @@ source ../colors.sh
 
 # Uninstall Visual Studio Code
 ./uninstall_vsCode.sh
+
+# Uninstall Brave
+./uninstall_app.sh

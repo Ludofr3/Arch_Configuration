@@ -2,13 +2,13 @@
 
 source ../colors.sh
 
-# Install Zsh
+# Installing Zsh
 echo -e "${GREEN}Installing Zsh...${NC}"
 sudo pacman -Sy zsh --noconfirm --needed
 
 # Change the default shell to Zsh
 echo -e "${BLUE}Changing the default shell to Zsh...${NC}"
-chsh -s /bin/zsh
+chsh -s $(which zsh)
 
 # Install Oh My Zsh
 echo -e "${BLUE}Installing Oh My Zsh...${NC}"

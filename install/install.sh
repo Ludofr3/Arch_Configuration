@@ -18,3 +18,9 @@ sudo pacman -S --needed base-devel git --noconfirm
 
 # Install Visual Studio Code of Microsoft
 ./install_vsCode.sh
+
+# Install differente apps
+./install_app.sh
+
+# Install Steam
+./install_steam.sh
