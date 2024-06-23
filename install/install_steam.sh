@@ -16,14 +16,9 @@ sudo pacman -S steam
 
 # Install ProtonUp-Qt
 echo "Installing ProtonUp-Qt..."
-yay -S protonup-qt
+yay -S protonup-qt --noconfirm --needed --quiet
 
-# Install Proton GE via ProtonUp-Qt
-echo "Installing Proton GE via ProtonUp-Qt..."
-protonup-qt
-
-# Enable Steam Play
-echo "Enabling Steam Play..."
 # You can enable Steam Play manually by navigating to the "Steam" menu in the top-left corner, clicking "Settings," selecting "Compatibility," enabling "Enable Steam Play for supported titles" and "Enable Steam Play for all other titles," and selecting the installed Proton GE version from the "Run other titles with" option.
+# https://linuxiac.com/how-to-play-games-on-arch-linux-using-steam/
 
 echo "Steam and Proton GE installation completed successfully."
