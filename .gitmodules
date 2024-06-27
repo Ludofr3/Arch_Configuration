@@ -1,0 +1,3 @@
+[submodule "hyprland-dotfiles"]
+	path = hyprland-dotfiles
+	url = git@github.com:axel-denis/hyprland-dotfiles.git

@@ -53,7 +53,8 @@
                 }
             },
             "details": [
-                "Hyprland"
+                "Hyprland",
+                "Gnome"
             ],
             "main": "Desktop"
         }
