@@ -1,12 +1,13 @@
 {
-    "__separator__": null,
-    "additional-repositories": ["multilib"],
+    "additional-repositories": [
+        "multilib"
+    ],
     "archinstall-language": "English",
     "audio_config": {
         "audio": "pipewire"
     },
     "bootloader": "Grub",
-    "config_version": "2.6.0",
+    "config_version": "2.8.0",
     "debug": false,
     "hostname": "archlinux",
     "kernels": [
@@ -44,18 +45,22 @@
     "parallel downloads": 10,
     "profile_config": {
         "gfx_driver": null,
-        "greeter": "gdm",
+        "greeter": null,
         "profile": {
-            "main": "minimal"
+            "custom_settings": {},
+            "detail": [
+                "Hyperland"
+            ],
+            "main": "Desktop"
         }
     },
     "save_config":null,
-    "script": "minimal",
+    "script": "guided",
     "silent": false,
     "skip_ntp": false,
     "skip_version_check": false,
     "swap": true,
     "timezone": "Europe/Paris",
     "uki": false,
-    "version": "2.6.0"
+    "version": "2.8.0"
 }
