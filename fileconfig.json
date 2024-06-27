@@ -52,7 +52,7 @@
                     "seat_access": "polkit"
                 }
             },
-            "detail": [
+            "details": [
                 "Hyprland"
             ],
             "main": "Desktop"
