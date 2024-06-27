@@ -44,12 +44,16 @@
     "packages": ["git"],
     "parallel downloads": 10,
     "profile_config": {
-        "gfx_driver": null,
-        "greeter": null,
+        "gfx_driver": "All open-source",
+        "greeter": "sddm",
         "profile": {
-            "custom_settings": {},
+            "custom_settings": {
+                "Hyprland": {
+                    "seat_access": "polkit"
+                }
+            },
             "detail": [
-                "Hyperland"
+                "Hyprland"
             ],
             "main": "Desktop"
         }
