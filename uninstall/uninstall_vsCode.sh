@@ -9,4 +9,4 @@ sudo pacman -Rns visual-studio-code-bin
 # Delete extensions folder
 sudo rm -rf ~/.vscode
 
-echo -e "${B_GREEN}==> La Désinstallation Visual Studio Code est terminée avec succès...${NC}\n"
+echo -e "${B_GREEN}==> Visual Studio Code have been successfully removed.${NC}\n"

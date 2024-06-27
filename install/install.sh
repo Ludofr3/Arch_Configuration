@@ -3,11 +3,11 @@
 source ../colors.sh
 
 # Update the system
-echo -e "${B_GREEN}==>${BLOD} Updating the system...${NC}"
+echo -e "${B_GREEN}==>${BOLD} Updating the system...${NC}"
 sudo pacman -Syu --noconfirm
 
 # Install Git
-echo -e "${B_GREEN}==>${BLOD} Installing Git ...${NC}"
+echo -e "${B_GREEN}==>${BOLD} Installing Git ...${NC}"
 sudo pacman -S --needed base-devel git --noconfirm
 
 # Install Yay

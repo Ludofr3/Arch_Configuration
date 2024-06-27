@@ -3,7 +3,7 @@
 source ../colors.sh
 
 # Installing Visual Studio Code
-echo -e "${B_GREEN}==>${BLOD} Installing Visual Studio Code of Microsoft...${NC}"
+echo -e "${B_GREEN}==>${BOLD} Installing Visual Studio Code of Microsoft...${NC}"
 yay -S visual-studio-code-bin --noconfirm --needed --quiet
 
 # Installing extensions' list
@@ -32,13 +32,13 @@ extensions=("${comments[@]}" "${cleanCode[@]}" "${themes[@]}" "${git[@]}" "${dev
 # Installing extensions
 for ext in "${extensions[@]}"
 do
-   echo -e "${BLUE}-->${BLODE} Vérification de l'existence de l'extension ${B_PURPLE}$ext${BLOD}...${NC}"
+   echo -e "\t${B_BLUE}->${BOLD} Vérification de l'existence de l'extension ${B_PURPLE}$ext${BOLD}...${NC}"
    if code --list-extensions | grep -q "^$ext$"; then
-      echo -e "${GREEN}-->${BLOD} L'extension ${PURPLE}$ext${BLOD} est déjà installée.${NC}"
+      echo -e "\t\t${RED}->${BOLD} L'extension ${B_CYAN}$ext${BOLD} est déjà installée.${NC}"
    else
       code --install-extension $ext --force &&
-      echo -e "${GREEN}-->${BLOD}L'extension ${PURPLE}$ext${BLOD} a été installée avec succès.${NC}\n"
+      echo -e "\t\t${GREEN}-->${BOLD}L'extension ${B_CYAN}$ext${BOLD} a été installée avec succès.${NC}\n"
    fi
 done
 
-echo -e "${B_GREEN}Visual Studio Code installation and configuration have been successfully completed.${NC}\n\n"
+echo -e "${B_GREEN}==>${BOLD} Visual Studio Code installation and configuration have been successfully completed.${NC}\n"
