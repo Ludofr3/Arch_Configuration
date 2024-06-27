@@ -4,9 +4,9 @@ source ../colors.sh
 
 echo -e "${B_GREEN}==>${BOLD} Installation and configuration of steam...${NC}"
 
-# Enable Arch's Multilib Repository
-echo "${BLUE}-->${BOLD} Enabling Arch's Multilib Repository...${NC}"
-sudo sed -i '/\[multilib\]/,/Include/ s/^#//' /etc/pacman.conf
+# # Enable Arch's Multilib Repository
+# echo "${BLUE}-->${BOLD} Enabling Arch's Multilib Repository...${NC}"
+# sudo sed -i '/\[multilib\]/,/Include/ s/^#//' /etc/pacman.conf
 
 # Install Steam
 echo "${BLUE}-->${BOLD} Installing Steam...${NC}"
