@@ -66,6 +66,5 @@
     "skip_version_check": false,
     "swap": true,
     "timezone": "Europe/Paris",
-    "uki": false,
-    "version": "2.8.0"
+    "uki": false
 }
