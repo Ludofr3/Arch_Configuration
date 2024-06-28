@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../colors.sh
+source ./colors.sh
 
 # Update the system
 echo -e "${B_GREEN}==>${BOLD} Updating the system...${NC}"
@@ -11,16 +11,16 @@ echo -e "${B_GREEN}==>${BOLD} Installing Git ...${NC}"
 sudo pacman -S --needed base-devel git --noconfirm
 
 # Install Yay
-./install_yay.sh
+./install/install_yay.sh
 
 # Install Zsh
-./install_zsh.sh
+./install/install_zsh.sh
 
 # Install Visual Studio Code of Microsoft
-./install_vsCode.sh
+./install/install_vsCode.sh
 
 # Install differente apps
-./install_app.sh
+./install/install_app.sh
 
 # Install Steam
-./install_steam.sh
+./install/install_steam.sh
