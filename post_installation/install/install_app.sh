@@ -21,3 +21,8 @@ echo -e "${B_GREEN}==>${BOLD} Spotify have been successfully installed.${NC}\n"
 echo -e "${B_GREEN}==>${BOLD} Installing Obsidian...${NC}"
 sudo pacman -Sy obsidian --noconfirm --needed
 echo -e "${B_GREEN}==>${BOLD} Obsidian have been successfully installed.${NC}\n"
+
+# Install Calibre
+echo -e "${B_GREEN}==>${BOLD} Installing Calibre...${NC}"
+sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
+echo -e "${B_GREEN}==>${BOLD} Calibre have been successfully installed.${NC}\n"
