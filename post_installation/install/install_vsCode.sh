@@ -4,14 +4,18 @@ source ../colors.sh
 source ../tools.sh
 
 
-Installing Visual Studio Code
+#Installing Visual Studio Code
 echo -e "${B_GREEN}==>${BOLD} Installing Visual Studio Code of Microsoft...${NC}"
 yay -S visual-studio-code-bin --noconfirm --needed --quiet
 
-declare -a extensions=$(read_file_config "../config/vscode_config_extensions.txt")
+declare -a extensions
+mapfile -t extensions < ../config/vscode_config_extensions.txt
 
-Installing extensions
-for ext in "${extensions[@]}"
+echo $extensions[@]
+
+#Installing extensions
+
+while IFS= read -r ext;
 do
    echo -e "\t${B_BLUE}->${BOLD} Vérification de l'existence de l'extension ${B_PURPLE}$ext${BOLD}...${NC}"
    if code --list-extensions | grep -q "^$ext$"; then
@@ -20,7 +24,7 @@ do
       code --install-extension $ext --force &&
       echo -e "\t\t${GREEN}-->${BOLD}L'extension ${B_CYAN}$ext${BOLD} a été installée avec succès.${NC}\n"
    fi
-done
+done < <(sed -e 's/[[:space:]]*#.*// ; /^[[:space:]]*$/d' ../config/vscode_config_extensions.txt)
 
 echo -e "${BOLD}Copy user settings${NC}"
 cp "../config/vscode_user_settings.json" "$HOME/.config/Code/User/settings.json"
